@@ -1,0 +1,24 @@
+﻿@model Article
+@{
+    ViewData["Title"] = "Neuer Artikel";
+}
+<h3 class="bg-primary text-white text-center">Neuen Aerikel anlegen</h3>
+
+<form asp-action="NewArticle" method="post">
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <input asp-for="Headline" class="form-control" />        
+    </div>
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <textarea asp-for="Content" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Author"></label>
+        <input asp-for="Author" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary text-succes">Speichern</button>
+    <a asp-action="Index" class="btn btn-danger">Zurück</a>
+
+</form>

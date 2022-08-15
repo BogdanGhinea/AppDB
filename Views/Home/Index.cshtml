@@ -3,3 +3,22 @@
     ViewData["Title"] = "Startseite";
 }
 <h3 class="text-center">Die aktuellen News</h3>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4 col g-lg-3 my-1">
+            <div class="card h-100">
+                <div class="header">
+                    
+                </div>
+                <div class=" =card-body">
+                    @item.Content.Substring(0,100) ...
+                </div>
+                <div class="card-footer">
+                    @item.Author | @item.Created.ToShortDateString() 
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<a asp-action="NewArticle" class="btn btn-primary">Neuer Artikel</a>
