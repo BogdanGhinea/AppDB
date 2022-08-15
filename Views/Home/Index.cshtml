@@ -12,7 +12,15 @@
                     
                 </div>
                 <div class=" =card-body">
-                    @item.Content.Substring(0,100) ...
+                    @if (item.Content.Length > 100)
+                    {
+                        @item.Content.Substring(0, 100) @:...
+                    }
+                else
+                {
+                    @item.Content
+                }
+
                 </div>
                 <div class="card-footer">
                     @item.Author | @item.Created.ToShortDateString() 

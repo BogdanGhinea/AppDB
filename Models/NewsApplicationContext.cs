@@ -44,7 +44,6 @@ namespace AppDatenB.Models
 
                 entity.Property(e => e.Content)
                     .IsRequired()
-                    .HasMaxLength(1)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Headline)
