@@ -8,10 +8,10 @@
     {
         <div class="col-sm-6 col-md-4 col g-lg-3 my-1">
             <div class="card h-100">
-                <div class="header">
-                    
+                <div class="card-header">
+                    @item.Headline
                 </div>
-                <div class=" =card-body">
+                <div class="card-body">
                     @if (item.Content.Length > 100)
                     {
                         @item.Content.Substring(0, 100) @:...
@@ -30,3 +30,4 @@
     }
 </div>
 <a asp-action="NewArticle" class="btn btn-primary">Neuer Artikel</a>
+<a asp-controller="Articles" asp-action="Index" class="btn btn-primary">Articles</a>
