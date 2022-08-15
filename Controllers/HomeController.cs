@@ -36,6 +36,7 @@ namespace AppDatenB.Controllers
             article.Id = maxId + 1;
             ctx.Add(article);
             ctx.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
